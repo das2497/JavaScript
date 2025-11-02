@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master JavaScript – Modern Course</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet">
+
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet">
+
+    <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background-color: #f9fafc;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #c300ff);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .hero .btn {
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+    }
+
+    /* Floating circles animation */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      background-color: white;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Features */
+    .feature {
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Instructor */
+    .instructor img {
+      border-radius: 100%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+  </head>
+  <body>
+
+    <!-- Hero Section -->
+    <section class="hero position-relative">
+      <div class="circle"
+        style="width:80px;height:80px;top:10%;left:20%;animation-delay:0s;"></div>
+      <div class="circle"
+        style="width:120px;height:120px;bottom:15%;right:25%;animation-delay:2s;"></div>
+      <div class="circle"
+        style="width:100px;height:100px;top:50%;left:70%;animation-delay:4s;"></div>
+
+      <div class="container">
+        <h1 id="typing-text"></h1>
+        <p>බිංදුවේ සිට JavaScript වලින් වැඩ්ඩෙක් වෙන්න එකතු වෙන්න.!</p>
+        <a href="#enroll" class="btn btn-light text-primary fw-bold">සම්බන්ද
+          වීමට</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4 fw-bold fade-in">අපගේ පාඨමාලාව තෝරා ගන්නේ
+        ඇයි?</h2>
+      <div class="row g-4">
+        <div class="col-md-4 fade-in">
+          <div class="feature">
+            <i class="bi bi-laptop display-4 text-primary mb-3"></i>
+            <h5>100% ප්‍රායෝගිකයි</h5>
+            <p>සැබෑ ලෝක ජාවාස්ක්‍රිප්ට් කුසලතා වැඩි දියුණු කිරීම සඳහා ප්‍රායෝගික
+              ව්‍යාපෘති මඟින් ඉගැන්වීම.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in">
+          <div class="feature">
+            <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+            <h5>Modern JavaScript</h5>
+            <p>ES6+, async/await, DOM manipulation සහ නවතම හොඳම භාවිතයන්.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in">
+          <div class="feature">
+            <i class="bi bi-translate display-4 text-primary mb-3"></i>
+            <h5>සින්හලෙන් ඉගැන්වීම</h5>
+            <p>සියඵම ඒකක සිනහලෙන් ඉගැන්වේ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <h2 class="text-center mb-4 fw-bold fade-in">පාඨමාලාව පිළිබඳ</h2>
+      <div class="row g-4">
+        <div class="col-md-4 offset-md-4 fade-in">
+          <div class="feature">
+            <i class="bi bi-info-square display-4 text-primary mb-3"></i>
+            <h4>පාඨමාලා කාලය : සති 4 යි</h4>
+            <h4>පාඨමාලා ගාස්තුව : රු. 2,000/=</h4>
+            <h4>අවශ්‍ය දේවල් : පරිගණකයක් සහ අනතර්ජාල පහසුකමක්</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enroll Section -->
+    <section id="enroll" class="text-center py-5 bg-light fade-in rounded">
+      <div class="container">
+        <h2 class="fw-bold mb-4 text-primary">💻 ඔබේ JavaScript ගමන අරඹන්න!</h2>
+
+        <div class="card shadow-lg border-0 mx-auto" style="max-width: 500px;">
+          <div class="card-body text-start">
+            <h5 class="fw-bold mb-3 text-success">💰 ගෙවීමේ විස්තර</h5>
+            <p class="mb-1"><strong>Bank Name:</strong> Commercial Bank of
+              Ceylon PLC</p>
+            <p class="mb-1"><strong>Account Number:</strong> 8001416066</p>
+            <p class="mb-1"><strong>Account Holder:</strong> W M I
+              WIJETHUNGA</p>
+            <p class="mb-3"><strong>Branch:</strong> Veyangoda Branch</p>
+
+            <h5 class="text-danger mt-4">📱 මුදල් ගෙවීමෙන් පසු රිසිට්පත WhatsApp
+              කරන්න</h5>
+             <p class="mb-1"><strong>WhatsApp Number : </strong>
+              <a href="https://wa.me/94774771042" target="_blank"
+                class="btn btn-success ms-2">077 477 1042</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 CodeZ Academy.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    // Typing animation
+    const text = "Platinum JavaScript Course – From Zero to Hero!";
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 80);
+      }
+    }
+    typing();
+
+    // Fade-in on scroll
+    const fadeElems = document.querySelectorAll('.fade-in');
+    const fadeInOnScroll = () => {
+      fadeElems.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', fadeInOnScroll);
+    fadeInOnScroll();
+  </script>
+  </body>
+</html>
