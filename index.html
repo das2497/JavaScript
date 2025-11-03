@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,233 +6,264 @@
     <title>Master JavaScript – Modern Course</title>
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background-color: #f9fafc;
-    }
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+        color: #222;
+      }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #0d6efd, #c300ff);
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+      /* ===== HERO SECTION ===== */
+      .hero {
+        position: relative;
+        background: radial-gradient(circle at top right, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        overflow: hidden;
+      }
 
-    .hero h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-    }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
 
-    .hero p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
+      .hero p {
+        font-size: 1.1rem;
+        margin-top: 10px;
+      }
 
-    .hero .btn {
-      margin-top: 20px;
-      padding: 10px 30px;
-      font-size: 1.1rem;
-      border-radius: 50px;
-    }
+      .hero .btn {
+        margin-top: 25px;
+        padding: 12px 35px;
+        font-size: 1.1rem;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+      }
 
-    /* Floating circles animation */
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.2;
-      background-color: white;
-      animation: float 8s infinite ease-in-out;
-    }
+      /* Animated Orbs */
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        filter: blur(40px);
+        animation: float 6s ease-in-out infinite alternate;
+      }
+      .orb1 {
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 15%;
+        animation-delay: 0s;
+      }
+      .orb2 {
+        width: 250px;
+        height: 250px;
+        bottom: 15%;
+        right: 10%;
+        animation-delay: 2s;
+      }
+      @keyframes float {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-30px);
+        }
+      }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
+      /* ===== FEATURES ===== */
+      .feature {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        padding: 40px 20px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: all 0.4s ease;
+      }
 
-    /* Features */
-    .feature {
-      text-align: center;
-      padding: 30px;
-      border-radius: 15px;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
+      .feature:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
 
-    .feature:hover {
-      transform: translateY(-10px);
-    }
+      .feature i {
+        font-size: 3rem;
+        color: #6a11cb;
+        margin-bottom: 20px;
+      }
 
-    /* Instructor */
-    .instructor img {
-      border-radius: 100%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    }
+      /* ===== INFO SECTION ===== */
+      .info-box {
+        background: linear-gradient(135deg, #ffffffcc, #f2f5ff);
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      }
 
-    /* Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+      /* ===== ENROLL SECTION ===== */
+      #enroll {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+      }
 
-    footer {
-      background-color: #0d6efd;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-  </style>
+      .card-glass {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        color: white;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-glass p {
+        margin: 5px 0;
+      }
+
+      /* ===== FADE-IN EFFECT ===== */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: #0d1b4c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
   </head>
+
   <body>
-
-    <!-- Hero Section -->
-    <section class="hero position-relative">
-      <div class="circle"
-        style="width:80px;height:80px;top:10%;left:20%;animation-delay:0s;"></div>
-      <div class="circle"
-        style="width:120px;height:120px;bottom:15%;right:25%;animation-delay:2s;"></div>
-      <div class="circle"
-        style="width:100px;height:100px;top:50%;left:70%;animation-delay:4s;"></div>
-
-      <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="container position-relative">
         <h1 id="typing-text"></h1>
-        <p>බිංදුවේ සිට JavaScript වලින් වැඩ්ඩෙක් වෙන්න එකතු වෙන්න.!</p>
-        <a href="#enroll" class="btn btn-light text-primary fw-bold">සම්බන්ද
-          වීමට</a>
+        <p class="mt-3">බිංදුවේ සිට JavaScript වලින් වැඩ්ඩෙක් වෙන්න – අදම අරඹන්න!</p>
+        <a href="#enroll" class="btn btn-light text-primary">🚀 දැන් සම්බන්ධ වන්න</a>
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- FEATURES -->
     <section class="container my-5">
-      <h2 class="text-center mb-4 fw-bold fade-in">අපගේ පාඨමාලාව තෝරා ගන්නේ
-        ඇයි?</h2>
+      <h2 class="text-center fw-bold mb-5 fade-in">අපගේ පාඨමාලාව තෝරා ගන්නේ ඇයි?</h2>
       <div class="row g-4">
         <div class="col-md-4 fade-in">
           <div class="feature">
-            <i class="bi bi-laptop display-4 text-primary mb-3"></i>
-            <h5>100% ප්‍රායෝගිකයි</h5>
-            <p>සැබෑ ලෝක ජාවාස්ක්‍රිප්ට් කුසලතා වැඩි දියුණු කිරීම සඳහා ප්‍රායෝගික
-              ව්‍යාපෘති මඟින් ඉගැන්වීම.</p>
+            <i class="bi bi-laptop"></i>
+            <h5 class="fw-bold">100% ප්‍රායෝගික</h5>
+            <p>සැබෑ ලෝක ව්‍යාපෘති මගින් ඔබේ JavaScript දක්ෂතා ඉහළ නැංවෙයි.</p>
           </div>
         </div>
         <div class="col-md-4 fade-in">
           <div class="feature">
-            <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
-            <h5>Modern JavaScript</h5>
-            <p>ES6+, async/await, DOM manipulation සහ නවතම හොඳම භාවිතයන්.</p>
+            <i class="bi bi-code-slash"></i>
+            <h5 class="fw-bold">Modern JavaScript</h5>
+            <p>ES6+, async/await, DOM සහ නවතම විධාන ඉගැන්වීම.</p>
           </div>
         </div>
         <div class="col-md-4 fade-in">
           <div class="feature">
-            <i class="bi bi-translate display-4 text-primary mb-3"></i>
-            <h5>සින්හලෙන් ඉගැන්වීම</h5>
-            <p>සියඵම ඒකක සිනහලෙන් ඉගැන්වේ.</p>
+            <i class="bi bi-translate"></i>
+            <h5 class="fw-bold">සින්හලෙන් ඉගැන්වීම</h5>
+            <p>සියළුම පාඩම් සිංහලෙන් පැහැදිලිව ඉගැන්වෙයි.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- COURSE INFO -->
     <section class="container my-5">
-      <h2 class="text-center mb-4 fw-bold fade-in">පාඨමාලාව පිළිබඳ</h2>
-      <div class="row g-4">
-        <div class="col-md-4 offset-md-4 fade-in">
-          <div class="feature">
-            <i class="bi bi-info-square display-4 text-primary mb-3"></i>
-            <h4>පාඨමාලා කාලය : සති 4 යි</h4>
-            <h4>පාඨමාලා ගාස්තුව : රු. 2,000/=</h4>
-            <h4>අවශ්‍ය දේවල් : පරිගණකයක් සහ අනතර්ජාල පහසුකමක්</h4>
+      <div class="row justify-content-center fade-in">
+        <div class="col-md-6">
+          <div class="info-box text-center">
+            <i class="bi bi-info-circle text-primary display-5 mb-3"></i>
+            <h4>🕓 පාඨමාලා කාලය: සති 4</h4>
+            <h4>💰 ගාස්තුව: රු. 2,000/=</h4>
+            <h4>💻 අවශ්‍ය දේ: පරිගණකයක් සහ අන්තර්ජාලය</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enroll Section -->
-    <section id="enroll" class="text-center py-5 bg-light fade-in rounded">
-      <div class="container">
-        <h2 class="fw-bold mb-4 text-primary">💻 ඔබේ JavaScript ගමන අරඹන්න!</h2>
+    <!-- ENROLL -->
+    <section id="enroll">
+      <div class="container fade-in">
+        <h2 class="fw-bold mb-4">ඔබේ JavaScript ගමන අරඹන්න!</h2>
 
-        <div class="card shadow-lg border-0 mx-auto" style="max-width: 500px;">
-          <div class="card-body text-start">
-            <h5 class="fw-bold mb-3 text-success">💰 ගෙවීමේ විස්තර</h5>
-            <p class="mb-1"><strong>Bank Name:</strong> Commercial Bank of
-              Ceylon PLC</p>
-            <p class="mb-1"><strong>Account Number:</strong> 8001416066</p>
-            <p class="mb-1"><strong>Account Holder:</strong> W M I
-              WIJETHUNGA</p>
-            <p class="mb-3"><strong>Branch:</strong> Veyangoda Branch</p>
+        <div class="card card-glass mx-auto p-4" style="max-width: 500px;">
+          <h5 class="fw-bold mb-3 text-warning">💳 ගෙවීමේ විස්තර</h5>
+          <p><strong>Bank:</strong> Commercial Bank of Ceylon PLC</p>
+          <p><strong>Account No:</strong> 8001416066</p>
+          <p><strong>Holder:</strong> W M I WIJETHUNGA</p>
+          <p><strong>Branch:</strong> Veyangoda</p>
 
-            <h5 class="text-danger mt-4">📱 මුදල් ගෙවීමෙන් පසු රිසිට්පත WhatsApp
-              කරන්න</h5>
-             <p class="mb-1"><strong>WhatsApp Number : </strong>
-              <a href="https://wa.me/94774771042" target="_blank"
-                class="btn btn-success ms-2">077 477 1042</a></p>
-          </div>
+          <hr class="border-light my-3" />
+
+          <h5 class="text-light">📱 මුදල් ගෙවීමෙන් පසු WhatsApp කරන්න</h5>
+          <a href="https://wa.me/94774771042" target="_blank" class="btn btn-success mt-2">
+            <i class="bi bi-whatsapp"></i> 077 477 1042
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-      <p>© 2025 CodeZ Academy.</p>
+      <p>© 2025 <strong>CodeZ Academy</strong>. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-    // Typing animation
-    const text = "Platinum JavaScript Course – From Zero to Hero!";
-    let i = 0;
-    function typing() {
-      if (i < text.length) {
-        document.getElementById("typing-text").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 80);
-      }
-    }
-    typing();
-
-    // Fade-in on scroll
-    const fadeElems = document.querySelectorAll('.fade-in');
-    const fadeInOnScroll = () => {
-      fadeElems.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add('visible');
+      // Typing animation
+      const text = "🔥 Platinum JavaScript Course – From Zero to Hero!";
+      let i = 0;
+      function typing() {
+        if (i < text.length) {
+          document.getElementById("typing-text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing, 70);
         }
-      });
-    };
-    window.addEventListener('scroll', fadeInOnScroll);
-    fadeInOnScroll();
-  </script>
+      }
+      typing();
+
+      // Fade-in on scroll
+      const fadeElems = document.querySelectorAll(".fade-in");
+      const fadeInOnScroll = () => {
+        fadeElems.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 50) {
+            el.classList.add("visible");
+          }
+        });
+      };
+      window.addEventListener("scroll", fadeInOnScroll);
+      fadeInOnScroll();
+    </script>
   </body>
 </html>
